@@ -1,9 +1,10 @@
 import React from 'react';
-import image from '../assets/avatar.svg';
-import { FaGithub, FaYoutube, FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import image from '../assets/nafim.png'
+import { FaGithub, FaYoutube, FaFacebook, FaLinkedin, FaInstagram, FaFileDownload } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
+import resume from '../assets/resumeOfNafim.pdf'
 
 const Banner = () => {
   return <div id='home' className='min-h-[85vh] lg-min-h-[78vh] flex items-center mt-28 mb-32 px-16'>
@@ -45,7 +46,7 @@ const Banner = () => {
             whileInView={'show'}
             viewport={{ once: false, amount: 0.7 }}
             className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
-            <button className='btn btn-lg'>Contact me</button>
+            <a href={resume} className='btn btn-lg py-2' download='resume'><FaFileDownload></FaFileDownload>Resume</a >
           </motion.div>
           <motion.div
             variants={fadeIn('up', 0.7)}
@@ -59,6 +60,7 @@ const Banner = () => {
             <a href='https://www.linkedin.com/in/nafim-islam-b30901281/'> <FaLinkedin></FaLinkedin> </a>
             <a href='https://www.instagram.com/nafim0805/'> <FaInstagram></FaInstagram> </a>
           </motion.div>
+          <p className='font-bold'>Gmail: nafim191119@gmail.com</p>
         </div>
         {/* social */}
 
